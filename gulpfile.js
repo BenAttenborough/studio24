@@ -40,7 +40,6 @@ gulp.task('watch', function () {
 
 function swallowError (error) {
     console.log(error.toString());
-    console.log("Error handler called");
     this.emit('end');
 }
 

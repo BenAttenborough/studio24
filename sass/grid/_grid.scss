@@ -1,24 +1,44 @@
+.row {
+  @extend .clearfix;
+}
+
 .col {
   padding: 0 0.5rem;
   float: left;
-  height: 100px;
+  //height: 100px;
   border: 1px solid red;
 }
 
+.large-1 {
+  width: 100%;
+}
+
 .large-3 {
-  width: 25%;
+  width: 100%;
+  @media (min-width: $tablet) {
+    width: 50%;
+  }
+  @media (min-width: $laptop) {
+    width: 25%;
+  }
 }
 
 .large-12 {
-  //width: 8.3333333%;
-  width: a100%;
-  //@media (min-width: $tablet) {
-  //
-  //}
+  width: 100%;
+  @media (min-width: $tablet) {
+    width: 25%;
+  }
+  @media (min-width: $laptop) {
+    width: 16.66666%;
+  }
+  @media (min-width: $desktop) {
+    width: 8.3333333%;
+  }
 }
 
 .content {
-  background-color: #f6b5b0;
+  //background-color: #f6b5b0;
   width: 100%;
-  height: 100%;
+  height: auto;
+
 }

@@ -1,10 +1,17 @@
 /*
  *  Normalize to reset styles in a cross browser fashion
+ *  and add base styles
  *
  */
 
 @import "basics/normalize";
 @import "basics/base";
+
+/*
+ *  Set variables
+ */
+
+@import "variables/mediaqueries";
 
 /*
  * Layout
@@ -17,3 +24,9 @@
  */
 
 @import "grid/grid";
+
+/*
+ *  Pages
+ */
+
+@import "page-styles/pages";
