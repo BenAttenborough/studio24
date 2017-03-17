@@ -4,3 +4,43 @@
   background: #ddd url("../img/craftsman.jpg") no-repeat center;
   background-size: cover;
 }
+
+.hero-text {
+  padding: 6rem 0 0 7rem;
+  height: 1px;
+  p {
+    color: #FFF;
+    margin: 0;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  h1 {
+    color: #FFF;
+    margin: 0;
+    font-size: 3rem;
+    text-decoration: underline;
+  }
+}
+
+.select-panel {
+  height: 8rem;
+  text-align: center;
+  border: 1rem solid #bbb6a7;
+  cursor: pointer;
+  &:hover {
+    border-color: #FFF;
+  }
+  h1,
+  h2,
+  p {
+    margin: 0;
+  }
+}
+
+.contact {
+  text-align: right;
+  padding: 0 0.5rem;
+  p {
+    font-weight: bold;
+  }
+}
