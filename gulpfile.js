@@ -14,22 +14,22 @@
 var sassDir = 'sass/',
     sassFile = 'style.scss',
     sassMain = sassDir.concat(sassFile),
-    cssDir = './',
+    cssDir = 'css/',
     gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     sassify = require('gulp-sass'),
     maps = require('gulp-sourcemaps'),
-    del = require('del')
+    del = require('del');
 
 gulp.task('sass', function () {
     return gulp.src([
             sassMain
         ])
-        .on('error', swallowError)
         .pipe(maps.init())
         .pipe(sassify({outputStyle: 'compressed'}))
+        .on('error', swallowError)
         .pipe(maps.write('./'))
         .pipe(gulp.dest(cssDir))
 });
@@ -40,6 +40,7 @@ gulp.task('watch', function () {
 
 function swallowError (error) {
     console.log(error.toString());
+    console.log("Error handler called");
     this.emit('end');
 }
 
