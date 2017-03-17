@@ -6,8 +6,13 @@
 @import "basics/normalize";
 
 /*
+ * Layout
+ */
+
+@import "layout/containers";
+
+/*
  * Grid system
- *
  */
 
 @import "grid/grid";
