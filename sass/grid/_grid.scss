@@ -1,6 +1,6 @@
 .row {
   @extend .clearfix;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr;
