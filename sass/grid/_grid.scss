@@ -1,55 +1,76 @@
+// Grid built with floats
+
 .row {
-  @extend .clearfix;
-  margin: 2rem 0;
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 1fr;
-  @media (min-width: $tablet) {
-    grid-template-columns: 1fr 1fr;
-  }
-  @media (min-width: $laptop) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 -0.5rem;
+  padding: 0 1rem;
+  @media screen and (min-width: $desktop-lg) {
+    padding: 0;
   }
 }
 
-//.col {
-//  padding: 0 0.5rem;
-//  float: left;
-//  margin-bottom: 1rem;
-//  //height: 100px;
-//  //border: 1px solid red;
-//}
-//
-//.large-1 {
-//  width: 100%;
-//}
-//
-//.large-3 {
-//  width: 100%;
-//  @media (min-width: $tablet) {
-//    width: 50%;
-//  }
-//  @media (min-width: $laptop) {
-//    width: 25%;
-//  }
-//}
-//
-//.large-12 {
-//  width: 100%;
-//  @media (min-width: $tablet) {
-//    width: 25%;
-//  }
-//  @media (min-width: $laptop) {
-//    width: 16.66666%;
-//  }
-//  @media (min-width: $desktop) {
-//    width: 8.3333333%;
-//  }
-//}
+.col {
+  padding: 0 0.5rem;
+  float: left;
+  margin-bottom: 1rem;
+}
 
-.content {
-  background-color: #f6b5b0;
+.large-1 {
   width: 100%;
-  height: auto;
+}
 
+.large-3 {
+  width: 100%;
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+  }
+  @media screen and (min-width: $laptop) {
+    width: 25%;
+  }
+}
+
+.large-12 {
+  width: 100%;
+  @media screen and (min-width: $tablet) {
+    width: 25%;
+  }
+  @media screen and (min-width: $laptop) {
+    width: 16.66666%;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 8.3333333%;
+  }
+}
+
+// Grid built with grid
+
+// If browser supports it we can now use grid
+// @supports not fully supported yet
+// but this block will just be ignored on browsers without support
+// and therefore the standard float method above will act as a default
+
+@supports (display:grid) {
+  .row {
+    @extend .clearfix;
+    margin: 2rem 0;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    @media (min-width: $tablet) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (min-width: $laptop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  // Resets float grid
+  .col {
+    padding: 0;
+    float: none;
+    margin: 0;
+  }
+
+  .large-3 {
+    width: 100%;
+  }
 }
