@@ -87,6 +87,17 @@
   text-align: right;
   padding: 0 0.5rem;
   p {
+    font-size: 22px;
+  }
+  @media (min-width: $laptop) {
+    font-size: 26px;
+  }
+}
+
+.phone-title {
+  display: none;
+  @media (min-width: $tablet) {
     font-weight: bold;
+    display: inline;
   }
 }
