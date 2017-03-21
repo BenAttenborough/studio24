@@ -48,8 +48,6 @@ gulp.task('build', function () {
             'css/style.css*',
             'img/**',
             '*.html',
-            '*.md',
-            '*.txt',
             '*.css',
             '*.css*'
         ],
