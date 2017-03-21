@@ -52,18 +52,21 @@
 .select-panel {
   display: flex;
   height: 6rem;
-  @media (min-width: $laptop) {
-    height: 10.5rem;
-  }
-  @media (min-width: $desktop) {
-    height: 8rem;
-  }
-  text-align: center;
+  text-align: left;
   border: 0.5rem solid #FFF;
   padding: 0 1rem;
   cursor: pointer;
   &:hover {
     border-color: #bbb6a7;
+  }
+  @media (min-width: $tablet) {
+    text-align: center;
+  }
+  @media (min-width: $laptop) {
+    height: 10.5rem;
+  }
+  @media (min-width: $desktop) {
+    height: 8rem;
   }
   h1,
   h2,
@@ -78,8 +81,9 @@
     }
   }
   p {
-    font-size: 18px;
+    display: none;
     @media (min-width: $laptop) {
+      display: inline;
       font-size: 22px;
       line-height: 1.75rem;
     }
@@ -87,7 +91,10 @@
 }
 
 .select-panel-text {
-  margin: auto;
+  margin: auto 0;
+  @media (min-width: $tablet) {
+    margin: auto;
+  }
 }
 
 .contact {
