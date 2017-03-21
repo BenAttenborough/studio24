@@ -50,6 +50,7 @@
 }
 
 .select-panel {
+  display: flex;
   height: 6rem;
   @media (min-width: $laptop) {
     height: 10.5rem;
@@ -69,18 +70,24 @@
   p {
     margin: 0;
   }
-  h1 {
+  h2 {
     font-size: 20px;
     @media (min-width: $laptop) {
       font-size: 24px;
+      line-height: 2rem;
     }
   }
   p {
     font-size: 18px;
     @media (min-width: $laptop) {
       font-size: 22px;
+      line-height: 1.75rem;
     }
   }
+}
+
+.select-panel-text {
+  margin: auto;
 }
 
 .contact {

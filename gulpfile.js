@@ -47,13 +47,11 @@ gulp.task('build', function () {
     return gulp.src([
             'css/style.css*',
             'img/**',
-            '*.php',
-            '*.js',
+            '*.html',
             '*.md',
             '*.txt',
             '*.css',
-            '*.css*',
-            '*.png'
+            '*.css*'
         ],
         {base: './'})
         .pipe(gulp.dest('dist'))
